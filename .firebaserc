@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-firebase-app-252a4": {
+      "hosting": {
+        "angular-firebase-app": [
+          "angular-firebase-app-252a4"
+        ]
+      }
+    }
+  }
+}
