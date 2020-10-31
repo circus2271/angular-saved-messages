@@ -8,12 +8,13 @@ import { MessageService } from "../shared/message.service";
   styleUrls: ['./recent-messages.component.scss']
 })
 export class RecentMessagesComponent implements OnInit {
-  messages: Message[];
+  recentMessages: Message[];
 
   constructor(private messageService: MessageService) {
   }
 
   ngOnInit(): void {
-    this.messages = this.messageService.getMessages();
+    this.messageService.getRecentMessages()
+      .subscribe(messages => this.recentMessages = messages)
   }
 }

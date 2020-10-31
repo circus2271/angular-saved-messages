@@ -8,7 +8,7 @@
       <!--      todo:-->
       <!--      сделать переход от карточки до страницы пользователя со скроллом на запись-->
       <!--      (страница со списком всех записей)-->
-      <li class="list-item" *ngFor="let message of messages">
+      <li class="list-item" *ngFor="let message of recentMessages">
         <mat-card>
           <div class="avatar">
             <img *ngIf="message.avatar; else noAvatar" src="{{message.avatar}}" alt="placeholder">
