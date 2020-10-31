@@ -1,0 +1,27 @@
+<!--https://material.angular.io/components/card/examples-->
+<div class="recent-messages">
+  <div class="container">
+    <h2 class="title">
+      Recent messages:
+    </h2>
+    <ul class="messages">
+      <!--      todo:-->
+      <!--      сделать переход от карточки до страницы пользователя со скроллом на запись-->
+      <!--      (страница со списком всех записей)-->
+      <li class="list-item" *ngFor="let message of messages">
+        <mat-card>
+          <div class="avatar">
+            <img *ngIf="message.avatar; else noAvatar" src="{{message.avatar}}" alt="placeholder">
+            <ng-template #noAvatar>
+              {{message.username | initials | uppercase}}
+            </ng-template>
+          </div>
+          <div class="user-info">
+            <div class="username">{{message.username}}</div>
+            <div class="message">{{message.message}}</div>
+          </div>
+        </mat-card>
+      </li>
+    </ul>
+  </div>
+</div>
