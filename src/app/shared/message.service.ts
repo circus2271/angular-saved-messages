@@ -9,7 +9,7 @@ import {Observable, of} from "rxjs";
 export class MessageService {
 
   getRecentMessages(): Observable<Message[]> {
-    return of(MESSAGES)
+    return of(MESSAGES.splice(0, 5));
   }
 }
 

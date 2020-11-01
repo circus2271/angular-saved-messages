@@ -5,17 +5,19 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class InitialsPipe implements PipeTransform {
 
-  transform(value: string): string {
-    const letters = value.split('');
+  transform(username: string): string {
+    const words = username.split(' ');
 
-    if (letters.length === 1) {
-      if (letters[0].length === 1) {
-        return letters[0]
+    if (words.length === 1) {
+      const name = words[0];
+
+      if (name.length === 1) {
+        return name[0]
       }
 
-      return letters[0] + letters[1]
+      return name[0] + name[1]
     }
 
-    return letters[0][0] + letters[letters.length - 1][0]
+    return words[0][0] + words[words.length - 1][0]
   }
 }
