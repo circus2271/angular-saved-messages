@@ -1,14 +1,12 @@
 <div class="container">
-  <!--  add forms logic-->
-  <!--  https://angular.io/guide/forms-overview#setup-in-reactive-forms-->
   <h2 class="title">
     Create new message:
   </h2>
   <div class="example-container">
-    <form [formGroup]="newMessageForm" (ngSubmit)="onSubmit()">
+    <form #f="ngForm" [formGroup]="newMessageForm" (ngSubmit)="onSubmit(f)">
       <mat-form-field appearance="fill">
         <mat-label>Username</mat-label>
-        <input matInput formControlName="username" required>
+        <input matInput formControlName="username" required autocomplete="off">
         <div *ngIf="username.invalid && (username.dirty || username.touched)"
              class="alert alert-danger">
 
@@ -23,7 +21,7 @@
       <br>
       <mat-form-field appearance="fill">
         <mat-label>Message</mat-label>
-        <textarea matInput formControlName="message" required></textarea>
+        <textarea matInput formControlName="message" required autocomplete="off"></textarea>
         <div *ngIf="message.invalid && (message.dirty || message.touched)"
              class="alert alert-danger">
 

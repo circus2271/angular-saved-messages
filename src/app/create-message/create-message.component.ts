@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MessageService } from "../shared/message.service";
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-create-message',
@@ -28,7 +29,7 @@ export class CreateMessageComponent implements OnInit {
   get username() { return this.newMessageForm.get('username'); }
   get message() { return this.newMessageForm.get('message'); }
 
-  onSubmit():void {
+  onSubmit(f: NgForm):void {
     const {username, message} = this.newMessageForm.controls;
 
     this.messageService.addMessage({
@@ -36,9 +37,6 @@ export class CreateMessageComponent implements OnInit {
       message: message.value
     });
 
-    this.newMessageForm.reset();
-    Object.keys(this.newMessageForm.controls).forEach(key => {
-      this.newMessageForm.controls[key].setErrors(null)
-    })
+    f.resetForm();
   }
 }
