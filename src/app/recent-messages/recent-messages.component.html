@@ -9,12 +9,16 @@
     <!--      (страница со списком всех записей)-->
     <li class="list-item" *ngFor="let message of recentMessages$ | async">
       <mat-card>
-        <div class="avatar">
-          <img *ngIf="message.avatar; else noAvatar" src="{{message.avatar}}" alt="placeholder">
-          <ng-template #noAvatar>
+        <ng-container *ngIf="message.avatar; else placeholderAvatar">
+          <div class="avatar">
+            <img src="{{message.avatar}}" alt="{{message.username}}'s avatar">
+          </div>
+        </ng-container>
+        <ng-template #placeholderAvatar>
+          <div class="placeholder-avatar">
             {{message.username | initials | uppercase}}
-          </ng-template>
-        </div>
+          </div>
+        </ng-template>
         <div class="user-info">
           <div class="username">{{message.username}}</div>
           <div class="message">{{message.message}}</div>

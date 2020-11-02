@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class InitialsPipe implements PipeTransform {
 
   transform(username: string): string {
-    const words = username.split(' ');
+    const words = username.trim().split(' ');
 
     if (words.length === 1) {
       const name = words[0];

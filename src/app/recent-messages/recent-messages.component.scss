@@ -13,7 +13,8 @@ img {
   }
 }
 
-.avatar {
+.avatar,
+.placeholder-avatar {
   border-radius: 50%;
   overflow: hidden;
   width: 50px;
@@ -23,11 +24,15 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid transparent;
 
   img {
     object-fit: cover;
     height: 100%;
   }
+}
+.placeholder-avatar {
+  border: 1px solid rgba(0, 0, 0, .87);
 }
 
 .username {
