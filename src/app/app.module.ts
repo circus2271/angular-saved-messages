@@ -9,15 +9,20 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from "@angular/material/card";
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { RecentMessagesComponent } from './recent-messages/recent-messages.component';
-import { InitialsPipe} from "./shared/initials.pipe";
+import { InitialsPipe } from "./shared/initials.pipe";
+import { CreateMessageComponent } from './create-message/create-message.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
         AppComponent,
         HeaderComponent,
         RecentMessagesComponent,
-        InitialsPipe
+        InitialsPipe,
+        CreateMessageComponent
     ],
   imports: [
     BrowserModule,
@@ -26,7 +31,10 @@ import { InitialsPipe} from "./shared/initials.pipe";
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

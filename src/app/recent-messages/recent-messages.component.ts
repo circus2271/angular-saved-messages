@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Message } from "../message";
 import { MessageService } from "../shared/message.service";
+import { Observable } from "rxjs";
 
 @Component({
   selector: 'app-recent-messages',
@@ -8,13 +9,12 @@ import { MessageService } from "../shared/message.service";
   styleUrls: ['./recent-messages.component.scss']
 })
 export class RecentMessagesComponent implements OnInit {
-  recentMessages: Message[];
+  recentMessages$: Observable<Message[]>;
 
   constructor(private messageService: MessageService) {
   }
 
   ngOnInit(): void {
-    this.messageService.getRecentMessages()
-      .subscribe(messages => this.recentMessages = messages)
+    this.recentMessages$ = this.messageService.getRecentMessages()
   }
 }

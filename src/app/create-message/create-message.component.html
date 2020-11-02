@@ -1,0 +1,21 @@
+<div class="container">
+   <!--  add forms logic-->
+  <!--  https://angular.io/guide/forms-overview#setup-in-reactive-forms-->
+  <h2 class="title">
+    Create new message:
+  </h2>
+  <div class="example-container">
+    <form [formGroup]="newMessageForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Username</mat-label>
+      <input matInput formControlName="username">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Message</mat-label>
+      <textarea matInput formControlName="message"></textarea>
+    </mat-form-field>
+    <button mat-raised-button [disabled]="!newMessageForm.valid">Create message</button>
+    </form>
+  </div>
+</div>
