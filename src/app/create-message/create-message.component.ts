@@ -35,5 +35,10 @@ export class CreateMessageComponent implements OnInit {
       username: username.value,
       message: message.value
     });
+
+    this.newMessageForm.reset();
+    Object.keys(this.newMessageForm.controls).forEach(key => {
+      this.newMessageForm.controls[key].setErrors(null)
+    })
   }
 }
