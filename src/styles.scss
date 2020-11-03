@@ -10,14 +10,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .container {
   padding: 24px 16px 0;
-
-  @media (min-width: 1200px) {
-    max-width: 50vw;
-  }
 }
 
 .main {
   @media (min-width: 1200px) {
     display: flex;
   }
+}
+
+.footer {
+  margin-top: 48px;
 }

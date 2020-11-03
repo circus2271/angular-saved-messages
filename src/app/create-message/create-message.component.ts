@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormGroupDirective } from '@angular/forms';
 import { MessageService } from "../shared/message.service";
-import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-create-message',
@@ -29,7 +28,7 @@ export class CreateMessageComponent implements OnInit {
   get username() { return this.newMessageForm.get('username'); }
   get message() { return this.newMessageForm.get('message'); }
 
-  onSubmit(f: NgForm):void {
+  onSubmit(f: FormGroupDirective):void {
     const {username, message} = this.newMessageForm.controls;
 
     this.messageService.addMessage({
