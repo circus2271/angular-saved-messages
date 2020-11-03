@@ -12,7 +12,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   padding: 24px 16px 0;
 
   @media (min-width: 1200px) {
-    width: 50vw;
+    max-width: 50vw;
   }
 }
 
