@@ -1,0 +1,13 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.example-spacer {
+  margin-left: auto;
+}
+
+mat-sidenav-container {
+  flex-grow: 1;
+}

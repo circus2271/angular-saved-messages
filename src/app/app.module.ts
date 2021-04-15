@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderComponent } from './header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -15,14 +14,17 @@ import { RecentMessagesComponent } from './recent-messages/recent-messages.compo
 import { InitialsPipe } from "./shared/initials.pipe";
 import { CreateMessageComponent } from './create-message/create-message.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatListModule } from '@angular/material/list'
+import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        HeaderComponent,
         RecentMessagesComponent,
         InitialsPipe,
-        CreateMessageComponent
+        CreateMessageComponent,
+        NavigationMenuComponent
     ],
   imports: [
     BrowserModule,
@@ -34,6 +36,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSidenavModule,
+    MatListModule,
     ReactiveFormsModule
   ],
   providers: [],
