@@ -1,7 +1,7 @@
 <div class="app-container">
   <header class="header">
     <mat-toolbar color="primary">
-      <span>angular-firebase-app</span>
+      <span>Dogs and Cats app</span>
       <span class="example-spacer"></span>
       <button (click)="sidenav.toggle()" mat-icon-button class="example-icon"
               aria-label="Example icon-button with menu icon">
@@ -15,13 +15,11 @@
       <app-navigation-menu></app-navigation-menu>
     </mat-sidenav>
     <mat-sidenav-content>
+      <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
+
+  <footer class="footer"></footer>
 </div>
 
-<!--<main class="main">-->
-<!--  <app-recent-messages></app-recent-messages>-->
-<!--  <app-create-message></app-create-message>-->
-<!--</main>-->
 
-<!--<footer class="footer"></footer>-->

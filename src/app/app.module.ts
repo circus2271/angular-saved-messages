@@ -10,21 +10,21 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from "@angular/material/card";
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { RecentMessagesComponent } from './recent-messages/recent-messages.component';
 import { InitialsPipe } from "./shared/initials.pipe";
-import { CreateMessageComponent } from './create-message/create-message.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatListModule } from '@angular/material/list'
 import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
+import { HomeComponent } from './home/home.component';
+import { UsersListComponent } from './users-list/users-list.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
     declarations: [
         AppComponent,
-        RecentMessagesComponent,
         InitialsPipe,
-        CreateMessageComponent,
-        NavigationMenuComponent
+        NavigationMenuComponent,
+        HomeComponent,
+        UsersListComponent,
     ],
   imports: [
     BrowserModule,
@@ -38,7 +38,7 @@ import { NavigationMenuComponent } from './navigation-menu/navigation-menu.compo
     MatInputModule,
     MatSidenavModule,
     MatListModule,
-    ReactiveFormsModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
