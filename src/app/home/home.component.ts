@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DogsPhotosService} from "../shared/dogs-photos.service";
-import {map} from "rxjs/operators";
-import {Observable} from "rxjs";
+import { DogsService } from "../shared/dogs.service";
+import { map } from "rxjs/operators";
+import { Observable } from "rxjs";
 
 @Component({
   selector: 'app-home',
@@ -11,10 +11,10 @@ import {Observable} from "rxjs";
 export class HomeComponent implements OnInit {
   photo$: Observable<string>
 
-  constructor(public dogsPhotos: DogsPhotosService) { }
+  constructor(private dogsService: DogsService) { }
 
   getPhoto(): void {
-    this.photo$ = this.dogsPhotos.getPhoto()
+    this.photo$ = this.dogsService.getPhoto()
       .pipe(map(photo => photo.message))
   }
 

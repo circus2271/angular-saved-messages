@@ -1,4 +1,8 @@
-<main class="main">
-<!--  <img src="https://images.dog.ceo/breeds/whippet/n02091134_19129.jpg" alt="">-->
-  <img src="{{photo$ | async}}" alt="">
-</main>
+<div class="photo-wrapper">
+  <div class="photo">
+    <img src="{{photo$ | async}}" alt="">
+  </div>
+  <div class="controls">
+    <button mat-raised-button color="primary" (click)="getPhoto()">Refresh image</button>
+  </div>
+</div>

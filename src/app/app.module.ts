@@ -15,7 +15,6 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatListModule } from '@angular/material/list'
 import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
 import { HomeComponent } from './home/home.component';
-import { UsersListComponent } from './users-list/users-list.component';
 import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
@@ -24,7 +23,6 @@ import { HttpClientModule } from "@angular/common/http";
         InitialsPipe,
         NavigationMenuComponent,
         HomeComponent,
-        UsersListComponent,
     ],
   imports: [
     BrowserModule,
