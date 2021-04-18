@@ -8,7 +8,7 @@ export interface IDogPhoto {
 }
 
 export interface IBreedsList {
-  message: string[],
+  message: any,
   success: boolean
 }
 

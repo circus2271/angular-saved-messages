@@ -1,0 +1,11 @@
+<h3>List of all breeds available</h3>
+<ul class="breeds-list">
+  <li class="list-item" *ngFor="let breed of breeds | keyvalue">
+    <div class="list-item__key">
+      {{ breed.key }}
+    </div>
+    <div class="list-item__value">
+      {{ breed.value }}
+    </div>
+  </li>
+</ul>

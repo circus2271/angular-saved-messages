@@ -10,7 +10,21 @@
 
   <mat-sidenav-container class="app-sidenav-container">
     <mat-sidenav #sidenav>
-      <app-navigation-menu></app-navigation-menu>
+      <mat-nav-list>
+        <a mat-list-item
+           routerLinkActive="active-link"
+           routerLink="/"
+           (click)="sidenav.close()">
+          Home
+        </a>
+        <a mat-list-item
+           routerLinkActive="active-link"
+           routerLink="/breeds-list"
+           (click)="sidenav.close()">
+          Breeds List
+        </a>
+      </mat-nav-list>
+
     </mat-sidenav>
     <mat-sidenav-content>
       <main class="main">

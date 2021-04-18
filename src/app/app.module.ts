@@ -13,16 +13,16 @@ import { MatInputModule } from '@angular/material/input';
 import { InitialsPipe } from "./shared/initials.pipe";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatListModule } from '@angular/material/list'
-import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from "@angular/common/http";
+import { BreedsListComponent } from './breeds-list/breeds-list.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         InitialsPipe,
-        NavigationMenuComponent,
         HomeComponent,
+        BreedsListComponent,
     ],
   imports: [
     BrowserModule,
